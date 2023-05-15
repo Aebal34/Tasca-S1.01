@@ -53,5 +53,14 @@ public class Car {
 		System.out.println("El vehículo está acelerando.");
 	
 	}
+
+	@Override
+	public String toString() {
+		return "Car brand=" + brand + "\n"
+				+"model="+model + "\n"
+				+"power="+power+".";
+	}
+	
+	
 	
 }
