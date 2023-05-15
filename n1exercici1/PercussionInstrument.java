@@ -8,19 +8,9 @@ public class PercussionInstrument extends Instrument{
 		super(name, price);
 	}
 	
-	//STATIC METHOD
-	static void test(){
-		System.out.println("Static method.");
-	}
-	
-	//STATIC BLOCK 
-	static{
-		System.out.println("Static block.");
-	}
-	
 	//BLOCK
 	{
-		System.out.println("Every time we instantiate the class");
+		play(); //Every time we instantiate the object
 	}
 	
 	//METHOD
