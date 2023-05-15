@@ -9,6 +9,6 @@ public class App {
 		smartphone1.alarm();
 		smartphone1.photograf();
 		
-		smartphone1.call("697 673 671");
+		smartphone1.call("699 677 611");
 	}
 }
