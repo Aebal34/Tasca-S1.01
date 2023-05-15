@@ -14,7 +14,7 @@ public class App {
 		//PROGRAM
 		while(!flag) {
 			switch(mainMenu()) {
-				case 1:
+				case 1: //Create redactor
 					dni = Teclado.leerString("Introduzca el DNI del redactor/a");
 					if(!dniExists(dni)) {
 						addRedactor(new Redactor(Teclado.leerString("Introoduzca el nombre del redactor/a: "), dni));
@@ -26,7 +26,7 @@ public class App {
 					}
 
 					break;
-				case 2:
+				case 2: //Remove redactor
 					redactorIndex = findRedactor(Teclado.leerString("Introduzca el DNI del redactor/a a eliminar:"));
 					if(redactorIndex >= 0) {
 						removeRedactor(redactorIndex);
@@ -37,7 +37,7 @@ public class App {
 						System.out.println("");
 					}
 					break;
-				case 3:
+				case 3: //Add news to redactor
 					redactorIndex = findRedactor(Teclado.leerString("Introduzca el DNI del redactor/a:"));
 					if(redactorIndex >= 0) {
 						addNewsSelection(redactorIndex, Teclado.leerString("Introduzca el titular de la noticia:"));
@@ -48,7 +48,7 @@ public class App {
 						System.out.println("");
 					}
 					break;
-				case 4:
+				case 4: //Remove news from redactor
 					redactorIndex = findRedactor(Teclado.leerString("Introduzca el DNI del redactor/a:"));
 					if(redactorIndex >= 0) {
 						redactors.get(redactorIndex).removeNews(Teclado.leerString("Introduzca el titular de la noticia a eliminar:"));
@@ -59,14 +59,14 @@ public class App {
 						System.out.println("");
 					}
 					break;
-				case 5:
+				case 5: //Show news from all redactors
 					if(redactors.size() >= 0) {
 						for(int i=0; i<redactors.size(); i++) {
 							redactors.get(i).showNews();
 						}
 					}
 					break;
-				case 6:
+				case 6: //Calculate price from news
 					redactorIndex = findRedactor(Teclado.leerString("Introduzca el DNI del redactor/a de la noticia:"));
 					if(redactorIndex >= 0) {
 						newsIndex = redactors.get(redactorIndex).findNews(Teclado.leerString("Introduzca el titular de la noticia:"));
@@ -82,7 +82,7 @@ public class App {
 						System.out.println("");
 					}
 					break;
-				case 7:
+				case 7: //Calculate score from news
 					redactorIndex = findRedactor(Teclado.leerString("Introduzca el DNI del redactor/a de la noticia:"));
 					if(redactorIndex >= 0) {
 						newsIndex = redactors.get(redactorIndex).findNews(Teclado.leerString("Introduzca el titular de la noticia:"));
@@ -98,7 +98,7 @@ public class App {
 						System.out.println("");
 					}
 					break;
-				case 0:
+				case 0: //Exit
 					flag = true;
 					break;
 				default:
@@ -117,8 +117,8 @@ public class App {
 							   +"3. Introducir noticia a redactor/a."+"\n"
 							   +"4. Eliminar noticia."+"\n"
 							   +"5. Mostrar todas las noticias por redactor/a"+"\n"
-							   +"6. Calcular puntuación de la noticia."+"\n"
-							   +"7. Calcular precio de la noticia."+"\n"
+							   +"6. Calcular precio de la noticia."+"\n"
+							   +"7. Calcular puntución de la noticia."+"\n"
 							   +"0. Salir del programa.");
 	}
 	static byte newsMenu() {
