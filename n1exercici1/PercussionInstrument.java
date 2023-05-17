@@ -14,6 +14,7 @@ public class PercussionInstrument extends Instrument{
 	}
 	
 	//METHOD
+	@Override
 	public void play() {
 		
 		System.out.println("Suena un instrumento de percusión.");

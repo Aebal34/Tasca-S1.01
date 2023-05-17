@@ -18,7 +18,7 @@ public class StringInstrument extends Instrument{
 	static void test() {  //Just to instantiate the class without creating an object
 		System.out.println("Suena bien.");
 	}
-	
+	@Override
 	public void play() {
 		
 		System.out.println("Suena un instrumento de cuerda.");

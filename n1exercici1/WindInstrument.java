@@ -17,7 +17,7 @@ public class WindInstrument extends Instrument{
 	static void test() {  //Just to instantiate the class without creating an object
 		System.out.println("Pruebas el instrumento. Suena bien.");
 	}
-	
+	@Override
 	public void play() {
 		
 		System.out.println("Suena un instrumento de viento.");
